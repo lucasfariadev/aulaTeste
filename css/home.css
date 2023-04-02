@@ -12,7 +12,7 @@ body {
 .container {
     background: #fff;
     height: 60vw;
-    width: 90%;
+    width: 100%;
     margin: auto;
     position: relative;
 }
@@ -20,26 +20,24 @@ body {
 
 
 header {
+    padding-left: 15%;
     background: #fff;
-    width: 100%;
-    height: 10vw;
-    padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     flex-flow: wrap;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
-header .imagem1 {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    padding: 20px;
+header .imagem1 img{
+margin-right: 40vh;
+width:30vh;
+
 }
 
-header .imagem2 {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
+header .imagem2 img {
+    width: 15vh;
+    
 }
 
 
@@ -60,7 +58,7 @@ nav ul li {
 
 nav ul li a {
     color: white;
-    font-size: 17px;
+    font-size: 80%;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
@@ -76,12 +74,18 @@ nav ul li a {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     border-radius: 5px;
     box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
     padding: 30px;
     margin: 20px;
+    justify-content: space-between;
+    align-items: center;
     width: 400px;
     transition: all 0.3s ease-out;
+    height: 40vh;
+    font-size: 16px;
 }
 
 .card:hover {
@@ -89,9 +93,8 @@ nav ul li a {
     cursor: pointer;
 }
 
-.cardp {
-    color: #a3a5ae;
-    font-size: 16px;
+.card {
+
 }
 
 .image {
@@ -102,13 +105,29 @@ nav ul li a {
 .azul {
     border-left: 3px solid #4895ff;
 }
+.azul:hover {
+    background-color:  rgba(72, 149, 255, .7);
+}
 
 .verde {
     border-left: 3px solid #3bb54a;
 }
+.verde:hover {
+    background-color: rgba(59, 181, 74, .7);
+}
 
 .vermelho {
     border-left: 3px solid #b3404a;
+}
+.vermelho:hover {
+    background-color: rgba(179, 64, 74, .7);
+}
+
+.roxo {
+    border-left: 3px solid #260046;
+}
+.roxo:hover {
+    background-color: rgba(38, 0, 70, .7);
 }
 
 footer {
@@ -122,12 +141,18 @@ footer {
     line-height: 100px;
 }
 
-@media(max-width:1200px) {
+
+
+
+
+@media(max-width:700px) {
     .row {
         flex-direction: column;
     }
-
+    header{
+    display: none;}
     header .imagem1 {
+
         display: none;
     }
 
@@ -153,4 +178,12 @@ main .conteudo {
     text-align: justify;
     margin-right: 200px;
     padding-left: 120px;
+}
+
+@media(max-width:500px) {
+    
+nav ul li a {
+    font-size: 43%;
+    padding: 0;
+}
 }
